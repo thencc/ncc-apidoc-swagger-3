@@ -1,16 +1,16 @@
 {
-    "name": "apidoc-openapi-3",
+    "name": "ncc-apidoc-openapi-3",
     "version": "1.0.0",
     "description": "Convert api doc json to openapi 3 json",
-    "author": "amano hikaru",
+    "author": "amano hikaru, extended by NCC",
     "main": "bin.js",
     "bin": "bin.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/amanoooo/apidoc-swagger-3"
+        "url": "https://github.com/thencc/ncc-apidoc-swagger-3"
     },
     "bugs": {
-        "url": "https://github.com/amanoooo/apidoc-swagger-3/issues"
+        "url": "https://github.com/thencc/ncc-apidoc-swagger-3/issues"
     },
     "keywords": [
         "api",
