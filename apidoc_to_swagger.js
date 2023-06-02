@@ -293,7 +293,13 @@ function mountResponseSpecSchema(verb, responses) {
     // if (verb.success && verb.success['fields'] && verb.success['fields']['Success 200']) {
     if (_.get(verb, 'success.fields.Success 200')) {
         const apidocParams = verb.success['fields']['Success 200']
-        responses[200] = transferApidocParamsToSwaggerBody(apidocParams, responses[200])
+        const parsedResponse = transferApidocParamsToSwaggerBody(apidocParams, responses[200]);
+        responses[200] = {
+            "description": "A successful response",
+            "content": {
+                "application/json": parsedResponse
+            }
+        }
     }
 }
 

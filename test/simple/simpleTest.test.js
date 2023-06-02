@@ -1,5 +1,5 @@
-const path                = require('path');
-const lib                 = require('../../lib');
+const path = require('path');
+const lib = require('../../lib');
 
 
 const OPTIONS = {
@@ -17,5 +17,6 @@ const OPTIONS = {
 test('simple file should be transformed correctly', () => {
     const generatedSwaggerData = lib.main(OPTIONS);
     const expectedSwaggerData = require('./output/swagger.json');
+    console.log('this is generated: ', JSON.stringify(generatedSwaggerData));
     expect(generatedSwaggerData).toEqual(expectedSwaggerData);
 });

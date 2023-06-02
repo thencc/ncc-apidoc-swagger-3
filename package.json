@@ -1,6 +1,6 @@
 {
-    "name": "ncc-apidoc-openapi-3",
-    "version": "1.0.0",
+    "name": "@thencc/apidoc-openapi-3",
+    "version": "0.0.1",
     "description": "Convert api doc json to openapi 3 json",
     "author": "amano hikaru, extended by NCC",
     "main": "bin.js",
@@ -22,6 +22,7 @@
         "openapi"
     ],
     "scripts": {
+        "link": "pnpm link --global",
         "test": "jest"
     },
     "license": "ISC",
