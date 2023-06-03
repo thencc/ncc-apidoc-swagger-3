@@ -57,12 +57,25 @@
                                         "lastname": {
                                             "type": "string",
                                             "description": "Lastname of the User."
+                                        },
+                                        "result": {
+                                            "type": "object",
+                                            "properties": {
+                                                "message": {
+                                                    "type": "string",
+                                                    "description": "Message of result"
+                                                }
+                                            },
+                                            "required": [
+                                                "message"
+                                            ]
                                         }
                                     },
                                     "type": "object",
                                     "required": [
                                         "firstname",
-                                        "lastname"
+                                        "lastname",
+                                        "result"
                                     ]
                                 }
                             }
