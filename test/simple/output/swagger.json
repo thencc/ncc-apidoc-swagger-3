@@ -13,12 +13,6 @@
                 ],
                 "summary": "GetUser",
                 "description": "Request User information",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
                 "parameters": [
                     {
                         "in": "query",

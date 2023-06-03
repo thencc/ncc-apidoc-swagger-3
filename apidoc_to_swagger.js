@@ -177,12 +177,6 @@ function generateProps(verb) {
         tags: [verb.group],
         summary: removeTags(verb.name),
         description: removeTags(verb.title),
-        consumes: [
-            "application/json"
-        ],
-        produces: [
-            "application/json"
-        ],
         parameters,
         requestBody: {
             required: true,
