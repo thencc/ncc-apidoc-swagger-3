@@ -185,6 +185,7 @@ function generateProps(verb) {
         ],
         parameters,
         requestBody: {
+            required: true,
             content: {
                 'application/json': body
             }
@@ -198,12 +199,12 @@ function generateProps(verb) {
 function generateBody(verb) {
     const mixedBody = []
 
-    if (verb && verb.parameter && verb.parameter.fields) {
-        const Parameter = verb.parameter.fields.Parameter || []
-        const _body = verb.parameter.fields.Body || []
+    if (verb && verb.body && verb.body.length > 0) {
+        // const Parameter = verb.parameter.fields.Parameter || []
+        const _body = verb.body || []
         mixedBody.push(..._body)
         if (!(verb.type === 'get')) {
-            mixedBody.push(...Parameter)
+            // mixedBody.push(...Parameter)
         }
     }
 
@@ -259,7 +260,7 @@ function generateRequestBody(verb, mixedBody) {
         }
     }
 
-    transferApidocParamsToSwaggerBody(mixedBody, bodyParameter)
+    const transferred = transferApidocParamsToSwaggerBody(mixedBody, bodyParameter)
 
     return bodyParameter
 }

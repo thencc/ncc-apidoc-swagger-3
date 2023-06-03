@@ -17,6 +17,6 @@ const OPTIONS = {
 test('simple file should be transformed correctly', () => {
     const generatedSwaggerData = lib.main(OPTIONS);
     const expectedSwaggerData = require('./output/swagger.json');
-    console.log('this is generated: ', JSON.stringify(generatedSwaggerData));
+    // console.log('this is generated: ', JSON.stringify(generatedSwaggerData));
     expect(generatedSwaggerData).toEqual(expectedSwaggerData);
 });

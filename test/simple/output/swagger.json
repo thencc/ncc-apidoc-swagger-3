@@ -7,7 +7,7 @@
     },
     "paths": {
         "/user/id": {
-            "get": {
+            "post": {
                 "tags": [
                     "User"
                 ],
@@ -31,8 +31,22 @@
                     }
                 ],
                 "requestBody": {
+                    "required": true,
                     "content": {
-                        "application/json": {}
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "description": "Name of user"
+                                    }
+                                },
+                                "type": "object",
+                                "required": [
+                                    "name"
+                                ]
+                            }
+                        }
                     }
                 },
                 "responses": {
